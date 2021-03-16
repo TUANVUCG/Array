@@ -6,15 +6,17 @@
     <style>
         table{
             text-align: center;
+            border-collapse: collapse;
         }
         td{
-            size: 5px;
+            width: 49px;
+            height: 50px;
         }
     </style>
 </head>
 <body>
     <script>
-        var a = "<table  border ='1' width= ' 500' height= '500' cellpadding='3' cellspacing='4'>"
+        var a = "<table  border ='1' width= '500' height= '500'>"
         for ( var i = 2; i <= 10; i++){
             a += "<tr>";
             for( var j=1; j <=10; j++){
@@ -28,7 +30,7 @@
             if(document.getElementById(id).innerHTML === ""){
                 document.getElementById(id).innerHTML = "X";
             }else if ( document.getElementById(id).innerHTML == "X"){
-                document.getElementById(id).innerHTML = "Y";
+                document.getElementById(id).innerHTML = "O";
             }else{
                 document.getElementById(id).innerHTML = "";
             }
