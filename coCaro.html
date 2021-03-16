@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cờ caro</title>
+    <style>
+        table{
+            text-align: center;
+        }
+        td{
+            size: 5px;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        var a = "<table  border ='1' width= ' 500' height= '500' cellpadding='3' cellspacing='4'>"
+        for ( var i = 2; i <= 10; i++){
+            a += "<tr>";
+            for( var j=1; j <=10; j++){
+                a += "<td id='"+i+","+j+"' onclick='onClick(this.id)'></td>";
+            }
+            a += "</tr>";
+        }
+        a += "</table>";
+        document.write(a);
+        function onClick(id) {
+            if(document.getElementById(id).innerHTML === ""){
+                document.getElementById(id).innerHTML = "X";
+            }else if ( document.getElementById(id).innerHTML == "X"){
+                document.getElementById(id).innerHTML = "Y";
+            }else{
+                document.getElementById(id).innerHTML = "";
+            }
+        }
+    </script>
+</body>
+</html>
