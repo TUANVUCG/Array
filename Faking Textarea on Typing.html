@@ -5,16 +5,19 @@
     <title>Faking Textarea on Typing</title>
 </head>
 <body>
-    <textarea id="text1" onkeypress="onKey()" cols="50" rows="10" ></textarea>
+    <textarea id="text" onkeyup="onKey()" cols="100" rows="10" ></textarea>
     <script>
-        var a = [1,2,3,5,7,8,23];
-        debugger
+        var str = "";
+        var a = ["Không ","làm ","mà ","muốn ","ăn ","thì ","chỉ ","có ","ăn ","...","ăn ","..."]
+        var count = 0;
         function onKey(){
-            for(var i = 0; i < a.length; i++){
-                var text = document.getElementById("text1").value;
-                if(text !== 1){
-                }document.getElementById("text1").innerHTML = a[i] ;
+            str+= a[count];
+            if(count === a.length){
+                str  = "";
+                count = -1;
             }
+            document.getElementById("text").value = str;
+            count++;
         }
     </script>
 </body>
