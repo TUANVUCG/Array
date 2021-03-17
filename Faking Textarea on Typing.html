@@ -5,9 +5,17 @@
     <title>Faking Textarea on Typing</title>
 </head>
 <body>
+    <textarea id="text1" onkeypress="onKey()" cols="50" rows="10" ></textarea>
     <script>
         var a = [1,2,3,5,7,8,23];
-        document.write(a[4]);
+        debugger
+        function onKey(){
+            for(var i = 0; i < a.length; i++){
+                var text = document.getElementById("text1").value;
+                if(text !== 1){
+                }document.getElementById("text1").innerHTML = a[i] ;
+            }
+        }
     </script>
 </body>
 </html>

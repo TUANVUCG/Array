@@ -15,9 +15,13 @@
         for (var i = 0; i < VietNamese.length; i++) {
             if (word === VietNamese[i]) {
                 alert(English[i]);
+                break;
             } else if (word === English[i]) {
                 alert(VietNamese[i]);
+                break;
             }
+        }if ((word !== VietNamese[i]) && (word !== English[i])) {
+            alert("Nhập từ khác hộ cái");
         }
     }
 </script>
