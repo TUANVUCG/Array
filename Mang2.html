@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mảng 2</title>
+</head>
+<body>
+    <script>
+        var arr = [2,4,7,98,34,32,64,65,-1,21,34]
+        var max = arr[0];
+        for(var i = 0; i < arr.length;i++){
+            if(arr[i] > max){
+                max = arr[i];
+                var vitri = arr.indexOf(max);
+            }
+        }
+        document.write("Max là: " + max);
+        document.write("</br>");
+        document.write("Vị trí max là: " + vitri );
+    </script>
+</body>
+</html>
